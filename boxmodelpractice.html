@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Box Model Designs</title>
+  <style>
+ 
+
+    .pagination {
+      border: 5px solid #ccc;
+      padding: 10px 20px;
+      display: inline-block;
+      background-color: white;
+      margin-bottom: 40px;
+    }
+
+    .pagination button,
+    .pagination a {
+      margin: 0 5px;
+      padding: 5px 10px;
+      border: 1px solid #888;
+      background-color: white;
+      text-decoration: none;
+      color: rgb(242, 242, 242);
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .stretch-btn {
+      background-color: green;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      transition: all 0.3s ease;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+
+    .stretch-btn:hover {
+      transform: scaleX(1.2);
+    }
+
+    .shadow-btn {
+      background-color: green;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      box-shadow: 0 5px #666;
+      cursor: pointer;
+      position: relative;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+
+    .shadow-btn:active {
+      box-shadow: 0 2px #666;
+      top: 3px;
+    }
+
+    .btn-group button {
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: green;
+      color: white;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .section {
+      background-color: #eee;
+      color: black;
+      padding: 20px;
+      margin-bottom: 40px;
+    }
+
+    h3 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="section">
+    <h3>4h. Pagination</h3>
+    <div class="pagination">
+      <button>Back</button>
+      <a href="#">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+      <a href="#">5</a>
+      <button>Next</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>4i. Stretch</h3>
+    <button class="stretch-btn">Stretch</button>
+  </div>
+
+  <div class="section">
+    <h3>4j. 3D Click</h3>
+    <button class="shadow-btn">Shadow</button>
+  </div>
+
+  <div class="section">
+    <h3>4k. Margin and Padding Together</h3>
+    <div class="btn-group">
+      <button>One</button>
+      <button>Two</button>
+      <button>Three</button>
+    </div>
+  </div>
+
+</body>
+</html>
