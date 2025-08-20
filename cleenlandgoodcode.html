@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CleenLand</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: antiquewhite;
+            width: 100%;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .left {
+            display: flex;
+            align-items: center;
+            gap: clamp(0.5rem, 2vw, 1.5rem);
+            flex-wrap: wrap;
+        }
+
+        .left-menu {
+            text-decoration: none;
+            color: black;
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .left-menu:hover {
+            color: #666;
+        }
+
+        .main-heading {
+            flex: 0 0 auto;
+            text-align: center;
+        }
+
+        .main-headings {
+            font-size: clamp(1.5rem, 4vw, 2.2rem);
+            margin: 0;
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+            gap: clamp(0.5rem, 2vw, 1.5rem);
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .right-menu {
+            text-decoration: none;
+            color: black;
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .right-menu:hover {
+            color: #666;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: clamp(2rem, 5vw, 4rem) 0;
+            gap: clamp(1rem, 3vw, 2rem);
+        }
+
+        .below-heading {
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            color: #666;
+            font-style: italic;
+        }
+
+        .long-heading {
+            max-width: 900px;
+            margin: 0;
+        }
+
+        .long-heading h1 {
+            font-size: clamp(1.8rem, 5vw, 3rem);
+            line-height: 1.2;
+            margin: 0;
+        }
+
+        .text-description {
+            max-width: 600px;
+            margin: 0;
+        }
+
+        .text-description p {
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            line-height: 1.6;
+            color: #555;
+            margin: 0;
+        }
+
+        .big-link {
+            margin-top: clamp(1rem, 3vw, 2rem);
+        }
+
+        .big-links {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            text-decoration: none;
+            color: black;
+            padding: clamp(0.8rem, 2vw, 1.5rem) clamp(1.5rem, 4vw, 3rem);
+            border: 2px solid black;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .big-links:hover {
+            background-color: black;
+            color: antiquewhite;
+        }
+
+        /* Responsive breakpoints */
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .left, .right {
+                justify-content: center;
+                width: 100%;
+            }
+
+            .main-heading {
+                order: -1;
+            }
+
+            .main-content {
+                padding: 2rem 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 0.5rem;
+            }
+
+            .left, .right {
+                gap: 0.5rem;
+            }
+
+            .left-menu, .right-menu {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Large screens */
+        @media (min-width: 1200px) {
+            .nav {
+                padding: 1.5rem 0;
+            }
+
+            .main-content {
+                padding: 6rem 0;
+            }
+        } 
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <div class="left">
+                <a class="left-menu" href="#">home</a>
+                <a class="left-menu" href="#">about</a>
+                <a class="left-menu" href="#">hours</a>
+                <a class="left-menu" href="#">products</a>
+                <a class="left-menu" href="#">contact</a>
+            </div>  
+
+            <div class="main-heading">
+                <h2 class="main-headings">cleenland</h2>
+            </div>
+
+            <div class="right">
+                <a class="right-menu" href="#">thoughts</a>
+                <a class="right-menu" href="#">products</a>
+                <a class="right-menu" href="#">instructions</a>
+                <a class="right-menu" href="#">grab an e-gift card</a>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="below-heading">
+                cleaning up a dirty world
+            </div>
+
+            <div class="long-heading">
+                <h1>
+                    Cleenland is your one-stop shop for low-waste, refillable
+                    personal and home care supplies.
+                </h1>
+            </div>
+
+            <div class="text-description">
+                <p>
+                    We also have reusable bottles, low-waste personal and home
+                    care accessories and smiles to go around.
+                </p>
+            </div>
+
+            <div class="big-link">
+                <a class="big-links" href="#">Visit Cleenland</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
