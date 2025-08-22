@@ -1,0 +1,37 @@
+   * {
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: sans-serif ;
+            color:white;
+            text-align:center;
+        }
+
+        body {
+            padding: min(4.2rem, 7%);
+            background-color:black;
+        }
+
+        h1 {
+            margin:2.5rem 0;
+        }
+
+        .card {
+            padding:2rem;
+            border:1px solid rgb(75,82,92);
+            border-radius: 10px;
+            background-color:#222429;
+            text-align:center;
+
+        }
+
+        .grid-container {
+            display: grid;
+            border:1px solid red;;
+            grid-template-columns:repeat(auto-fit,minmax(300px, 1fr));
+            gap:15px;
+            justify-content: center;
+        }
