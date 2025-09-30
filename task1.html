@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    * {
+        margin:2rem;
+        padding: 0;
+        box-sizing: border-box; 
+    }
+    </style>
+</head>
+<body>
+ 
+<!-- 
+ <input id="a" type="text" placeholder="Enter the name">
+<input id="b" type="password" placeholder="Enter password">
+
+<button onclick="validFunction()">Submit</button> 
+<button onclick="resetFunction()">Reset</button>  -->
+
+
+
+<!-- <div class="textbox">
+    Lorem ipsum dolor sit amet.
+</div>
+<button onclick="colorchange()">Click</button> -->
+
+
+<!-- <script src="script.js"></script> -->
+
+<input type="text" id="cnic" placeholder="Enter CNIC (42201-1234567-1)">
+<input type="text" id="contact" placeholder="Enter Contact (03XX-XXXXXXX)">
+<input type="text" id="email" placeholder="Enter Email (abc@xyz.com)">
+<input type="text" id="enrollment" placeholder="Enter Enrollment (e.g. 21-CS-123)">
+<input type="text" id="password" placeholder="Enter Password (min 6 chars)">
+
+<button onclick="validateAll()">Validate</button>
+
+
+
+
+<script>
+    function validateAll() {
+    
+    let cnic = document.getElementById('cnic');
+    let contact = document.getElementById('contact');
+    let email = document.getElementById('email');
+    let enrollment = document.getElementById('enrollment');
+    let password = document.getElementById('password');
+
+    
+    let cnicPattern = /^\d{5}-\d{7}-\d{1}$/;        
+    let contactPattern = /^03\d{2}-\d{7}$/;         
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+    let enrollmentPattern = /^\d{2}-[A-Z]{2,3}-\d{3}$/; 
+    let passwordPattern = /^.{6,}$/;                
+
+    function validateField(input, regex) {
+        if (regex.test(input.value)) {
+            input.style.border = "4px solid green";  
+        } else {
+            input.style.border = "4px solid red";    
+        }
+    }
+
+    validateField(cnic, cnicPattern);
+    validateField(contact, contactPattern);
+    validateField(email, emailPattern);
+    validateField(enrollment, enrollmentPattern);
+    validateField(password, passwordPattern);
+}
+
+
+
+</script>
+
+
+    
+</body>
+</html>
