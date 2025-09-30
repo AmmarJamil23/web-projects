@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Switcher</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 100%;
+      height: 100vh;
+      background-color: antiquewhite;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid #555;
+    }
+
+    .profile-pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Fields */
+    .form-fields {
+      display: grid;
+      grid-template-columns: repeat(2, 200px);
+      gap: 1rem 2rem;
+    }
+
+    .form-fields input {
+      padding: 0.5rem 1rem;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    .form-fields input:focus {
+      border-color: #333;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .buttons button {
+      padding: 0.6rem 1.5rem;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    .buttons button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-pic">
+    <img id="profileImage" src="" >
+  </div>
+
+  <div class="form-fields">
+    <input id="nameField" type="text" placeholder="Enter Name">
+    <input id="ageField" type="text" placeholder="Enter Age">
+    <input id="professionField" type="text" placeholder="Enter Profession">
+    <input id="bioField" type="text" placeholder="Enter Bio">
+  </div>
+
+  <div class="buttons">
+    <button onclick="loadProfile('man1')">User1</button>
+    <button onclick="loadProfile('man2')">User2</button>
+    <button onclick="loadProfile('man3')">User3</button>
+  </div>
+
+  <script>
+    const profiles = {
+      man1: {
+        name: "Ali",
+        age: "28",
+        profession: "Designer",
+        bio: "Reading Books.",
+        img: "img1.jpeg"
+      },
+      man2: {
+        name: "Ahmed",
+        age: "32",
+        profession: "Teacher",
+        bio: "Reading non fiction",
+        img: "img2.jpeg"
+      },
+      man3: {
+        name: "Rahman",
+        age: "30",
+        profession: "Developer",
+        bio: "Exploring Technologies.",
+        img: "img3.jpeg"
+      }
+    };
+
+    function loadProfile(man) {
+      const data = profiles[man];
+
+      document.getElementById("profileImage").src = data.img;
+      document.getElementById("nameField").value = data.name;
+      document.getElementById("ageField").value = data.age;
+      document.getElementById("professionField").value = data.profession;
+      document.getElementById("bioField").value = data.bio;
+    }
+
+    document.getElementById("profileImage").src = "";
+    document.getElementById("nameField").value = "";
+    document.getElementById("ageField").value = "";
+    document.getElementById("professionField").value = "";
+    document.getElementById("bioField").value = "";
+  </script>
+</body>
+</html>
